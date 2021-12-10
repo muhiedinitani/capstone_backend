@@ -1,0 +1,27 @@
+{
+   "skiAreas": {
+      "skiArea": [
+         {
+            "name": {
+               "__cdata": "Smokey Mountain Ski Club"
+            },
+            "officialWebsite": {
+               "__cdata": "http://www.skismokey.ca/"
+            },
+            "georeferencing": {
+               "_lat": "52.977947",
+               "_lng": "-66.92094"
+            },
+            "regions": {
+               "region": [
+                  {
+                     "_id": "335",
+                     "__cdata": "Newfoundland and Labrador"
+                  }
+               ]
+            },
+            "_id": "1"
+         }
+      ]
+   }
+}
