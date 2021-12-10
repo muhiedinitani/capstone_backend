@@ -1,11 +1,13 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2MzkxODY0MDJ9.pBS82iHAt_SbZwP7EfxC-rmW1SK_eje4O8ImVDOFvxo
+
 ### user create
 POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-  "first_name": "Charlie",
-  "last_name": "Chapman",
-  "email": "charliechapman@gmail.com",
+  "first_name": "David",
+  "last_name": "Daniels",
+  "email": "daviddaniels@gmail.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -15,6 +17,20 @@ POST http://localhost:3000/sessions
 Content-Type: application/json
 
 {
-  "email": "charliechapman@gmail.com",
+  "email": "daviddaniels@gmail.com",
   "password": "password"
+}
+
+### trip create
+POST http://localhost:3000/trips
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+# YOU LEFT HERE. FINISH ADDING JWT TOKEN TO REQUEST. TEST WHEN DONE. NEED TO AUTHENTICATE USER BEFORE MAKING A TRIP.
+
+{
+  "resort_id": 40,
+  "day_start": "12/14/22",
+  "day_end": "01/03/23",
+  "original_query": "test"
 }
