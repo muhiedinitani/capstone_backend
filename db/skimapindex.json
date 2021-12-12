@@ -2415,24 +2415,6 @@
          },
          {
             "name": {
-               "__cdata": "Talisman Mountain Resort"
-            },
-            "georeferencing": {
-               "_lat": "44.391189",
-               "_lng": "-80.54633"
-            },
-            "regions": {
-               "region": [
-                  {
-                     "_id": "326",
-                     "__cdata": "Ontario"
-                  }
-               ]
-            },
-            "_id": "115"
-         },
-         {
-            "name": {
                "__cdata": "Mt. Chinguacousy Ski and Snowboard Hill"
             },
             "officialWebsite": {
@@ -2687,6 +2669,9 @@
          {
             "name": {
                "__cdata": "Heyden Ski Hill & Resort"
+            },
+            "officialWebsite": {
+               "__cdata": "http://www.mountdufour.com"
             },
             "georeferencing": {
                "_lat": "46.6436028317519",
@@ -3135,6 +3120,9 @@
             "name": {
                "__cdata": "Grand Targhee Ski Resort"
             },
+            "officialWebsite": {
+               "__cdata": "https://www.grandtarghee.com/"
+            },
             "georeferencing": {
                "_lat": "43.783809324708",
                "_lng": "-110.94663929382"
@@ -3176,6 +3164,9 @@
          {
             "name": {
                "__cdata": "Hogadon Ski Area"
+            },
+            "officialWebsite": {
+               "__cdata": "http://www.hogadon.net/"
             },
             "georeferencing": {
                "_lat": "42.744961111111",
