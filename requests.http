@@ -32,3 +32,9 @@ Authorization: Bearer {{jwt}}
   "day_end": "01/03/23",
   "original_query": "test"
 }
+
+### resorts index
+GET http://localhost:3000/resorts
+
+### resort show
+GET http://localhost:3000/resorts/1

@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   post "/users" => "users#create"
   post "/sessions" => "sessions#create"
   post "/trips" => "trips#create"
+  get "/resorts" => "resorts#index"
+  get "/resorts/:id" => "resorts#show"
 end
