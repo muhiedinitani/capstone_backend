@@ -22,7 +22,7 @@ class ResortsController < ApplicationController
         name: resort.name,
         lat: resort.lat,
         lng: resort.lng,
-        website: resort.official_website
+        official_website: resort.official_website
       } 
     end
 
