@@ -1,4 +1,4 @@
-@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2Mzk0MTQxODJ9.hciCYbxceZsLW2cmC0Dhas5JgvyXFDxa3nM3Qn2tyX4
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE2Mzk2MTQ5MzR9.55ZRfPHCVRBP4lwnDmwL3EvfcxYhhOuwLYSav6s_vfA
 
 ### user create
 POST http://localhost:3000/users
@@ -17,9 +17,15 @@ POST http://localhost:3000/sessions
 Content-Type: application/json
 
 {
-  "email": "test1@test.com",
+  "email": "test3@test.com",
   "password": "password"
 }
+
+###trips index
+GET http://localhost:3000/trips
+
+### trip show
+GET http://localhost:3000/trips/1
 
 ### trip create
 POST http://localhost:3000/trips
@@ -27,9 +33,9 @@ Content-Type: application/json
 Authorization: Bearer {{jwt}}
 
 {
-  "resort_id": 40,
-  "day_start": "12/14/22",
-  "day_end": "01/03/23",
+  "resort_id": 76,
+  "day_start": "01/09/22",
+  "day_end": "01/17/22",
   "original_query": "test"
 }
 

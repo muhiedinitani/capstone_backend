@@ -1,5 +1,10 @@
 class TripsController < ApplicationController
   before_action :authenticate_user, only: [:create] #you can add more methods if needed. add a comma after :create
+ 
+  def index
+    trips = Trip.all
+    render json: trips.as_json
+  end
 
   def create
     trip = Trip.new(
@@ -14,6 +19,11 @@ class TripsController < ApplicationController
     else
       render json: { errors: trip.errors.full_messages }, status: :bad_request
     end
+  end
+
+  def show
+    trip = Trip.find_by(id: params[:id])
+    render json: trip.as_json
   end
 
 end
