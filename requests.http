@@ -39,5 +39,5 @@ GET http://localhost:3000/resorts
 ### resort show
 GET http://localhost:3000/resorts/1
 
-###
+### nearby_resorts search
 GET http://localhost:3000/nearby_resorts?address=chicago, il
