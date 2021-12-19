@@ -19,6 +19,7 @@ class ResortsController < ApplicationController
       distance = Geocoder::Calculations.distance_between(coordinates, [resort.lat, resort.lng])
       resorts_distances << {
         distance: distance,
+        id: resort.id,
         name: resort.name,
         lat: resort.lat,
         lng: resort.lng,
