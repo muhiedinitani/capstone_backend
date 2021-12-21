@@ -46,7 +46,7 @@ class ResortsController < ApplicationController
     request = Net::HTTP::Get.new(url)
 
     response = https.request(request)
-    render json: JSON.parse(response.read_body)
+    render json: JSON.parse(response.read_body)["results"][0]["geometry"]["location"].as_json
 
     # response_json = JSON.parse(response.read_body)
     # render json: response_json["results"][0]["geometry"]["location"].as_json

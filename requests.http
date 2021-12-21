@@ -55,4 +55,4 @@ GET http://localhost:3000/nearby_resorts?address=chicago
 GET http://localhost:3000/get_location?address=chicago
 
 ### resorts nearby search google
-GET http://localhost:3000/nearby_search?location=39.4817,-106.0384
+GET http://localhost:3000/nearby_search?location=42.023131,-87.52366099999999
