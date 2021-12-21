@@ -32,4 +32,40 @@ class ResortsController < ApplicationController
 
     render json: closest_five_resorts
   end
+
+  def get_location
+    require "json"
+    require "uri"
+    require "net/http"
+
+    url = URI("https://maps.googleapis.com/maps/api/geocode/json?address=#{params[:address]}&key=#{Rails.application.credentials.gmaps_api_key}")
+
+    https = Net::HTTP.new(url.host, url.port)
+    https.use_ssl = true
+
+    request = Net::HTTP::Get.new(url)
+
+    response = https.request(request)
+    render json: JSON.parse(response.read_body)
+
+    # response_json = JSON.parse(response.read_body)
+    # render json: response_json["results"][0]["geometry"]["location"].as_json
+  end
+
+  def nearby_search
+    require "json"
+    require "uri"
+    require "net/http"
+
+    url = URI("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{params[:location]}&type=point_of_interest&keyword=ski+resort&radius=500000&key=#{Rails.application.credentials.gmaps_api_key}")
+
+    https = Net::HTTP.new(url.host, url.port)
+    https.use_ssl = true
+
+    request = Net::HTTP::Get.new(url)
+
+    response = https.request(request)
+    render json: response.read_body
+  end
+
 end

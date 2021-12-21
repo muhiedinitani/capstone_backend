@@ -45,8 +45,14 @@ Authorization: Bearer {{jwt}}
 ### resorts index
 GET http://localhost:3000/resorts
 
-### resort show
+### resorts show
 GET http://localhost:3000/resorts/1
 
-### nearby_resorts search
+### resorts nearby resorts search; to be removed
 GET http://localhost:3000/nearby_resorts?address=chicago
+
+### resorts get location google geocoder
+GET http://localhost:3000/get_location?address=chicago
+
+### resorts nearby search google
+GET http://localhost:3000/nearby_search?location=39.4817,-106.0384

@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   get "/resorts" => "resorts#index"
   get "/resorts/:id" => "resorts#show"
   get "/nearby_resorts" => "resorts#nearby_resorts"
+  get "/get_location" => "resorts#get_location"
+  get "/nearby_search" => "resorts#nearby_search"
 end
