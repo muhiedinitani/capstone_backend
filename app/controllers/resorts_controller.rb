@@ -47,9 +47,6 @@ class ResortsController < ApplicationController
 
     response = https.request(request)
     render json: JSON.parse(response.read_body)["results"][0]["geometry"]["location"].as_json
-
-    # response_json = JSON.parse(response.read_body)
-    # render json: response_json["results"][0]["geometry"]["location"].as_json
   end
 
   def nearby_search
@@ -65,7 +62,23 @@ class ResortsController < ApplicationController
     request = Net::HTTP::Get.new(url)
 
     response = https.request(request)
-    render json: response.read_body
+    render json: JSON.parse(response.read_body)["results"].first(4)
+  end
+
+  def place_details
+    require "json"
+    require "uri"
+    require "net/http"
+
+    url = URI("https://maps.googleapis.com/maps/api/place/details/json?place_id=#{params[:place_id]}&key=#{Rails.application.credentials.gmaps_api_key}")
+
+    https = Net::HTTP.new(url.host, url.port)
+    https.use_ssl = true
+
+    request = Net::HTTP::Get.new(url)
+
+    response = https.request(request)
+    render json: JSON.parse(response.read_body)["result"]
   end
 
 end

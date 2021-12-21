@@ -42,17 +42,20 @@ Authorization: Bearer {{jwt}}
   "original_query": "test"
 }
 
-### resorts index
+### resorts: index
 GET http://localhost:3000/resorts
 
-### resorts show
+### resorts: show
 GET http://localhost:3000/resorts/1
 
-### resorts nearby resorts search; to be removed
+### resorts: nearby resorts search; to be removed
 GET http://localhost:3000/nearby_resorts?address=chicago
 
-### resorts get location google geocoder
+### resorts: get location google geocoder
 GET http://localhost:3000/get_location?address=chicago
 
-### resorts nearby search google
-GET http://localhost:3000/nearby_search?location=42.023131,-87.52366099999999
+### resorts: nearby search google
+GET http://localhost:3000/nearby_search?location=41.8781136,-87.6297982
+
+### resorts: place details google
+GET http://localhost:3000/place_details?place_id=ChIJNRHAXNZQDogRkXRRpMecRXU
