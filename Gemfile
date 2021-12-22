@@ -40,3 +40,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #geocoder
 gem 'geocoder'
+
+#down streamer
+gem "down", "~> 5.0"
